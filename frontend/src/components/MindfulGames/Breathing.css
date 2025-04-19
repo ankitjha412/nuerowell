@@ -1,0 +1,67 @@
+/* Base styling for the circle */
+.breathing-circle {
+    width: 200px;                          /* Circle width */
+    height: 200px;                         /* Circle height */
+    border-radius: 50%;                    /* Make it round */
+    border: 2px solid #000;                /* Outline */
+    display: flex;                         /* Center content horizontally */
+    justify-content: center;               /* Center content horizontally */
+    align-items: center;                   /* Center content vertically */
+    position: relative;                    /* For positioning pseudo-elements */
+    overflow: hidden;                      /* Hide overflow of animated elements */
+    z-index: 1;    
+    font-weight: 900;                        /* Ensure text stays above overlays */
+}
+
+/* Inhale: green overlay fills from bottom */
+.breathing-circle.inhale::before {
+    content: "";
+    position: absolute;
+    bottom: 0;                             /* Start from the bottom */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: green;
+    transform: scaleY(0);                  /* Start with no fill */
+    transform-origin: bottom;              /* Grow upward */
+    animation: fillGreen 4s forwards;       /* 4s animation duration */
+    z-index: -1;                           /* Place behind text */
+}
+
+@keyframes fillGreen {
+    to {
+        transform: scaleY(1);              /* Fully filled green */
+    }
+}
+
+/* Hold: add a popping (scaling) effect that repeats infinitely */
+.breathing-circle.hold {
+    animation: popEffect 0.5s ease-in-out infinite;   /* Infinite pop effect */
+}
+
+@keyframes popEffect {
+    0% { transform: scale(1); }             /* Normal size */
+    50% { transform: scale(1.1); }          /* Slightly larger */
+    100% { transform: scale(1); }           /* Return to normal */
+}
+
+/* Exhale: red overlay fills from top */
+.breathing-circle.exhale::before {
+    content: "";
+    position: absolute;
+    top: 0;                                /* Start from the top */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: red;
+    transform: scaleY(0);                  /* Start with no fill */
+    transform-origin: top;                 /* Grow downward */
+    animation: fillRed 4s forwards;         /* 4s animation duration */
+    z-index: -1;                           /* Place behind text */
+}
+
+@keyframes fillRed {
+    to {
+        transform: scaleY(1);              /* Fully filled red */
+    }
+}

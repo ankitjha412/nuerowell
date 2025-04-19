@@ -1,0 +1,64 @@
+/* Overall game container */
+.color-matching-game {
+    max-width: 500px;                /* Wider container */
+    margin: 50px auto;               /* Center horizontally with top spacing */
+    padding: 30px;                   /* Spacious padding */
+    border-radius: 20px;             /* Large rounded corners */
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.7) 0%,
+      rgba(255, 255, 255, 0.4) 100%
+    );                               /* Subtle glass-like gradient */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Softer, bigger shadow */
+    backdrop-filter: blur(8px);      /* Blur background behind the container */
+    text-align: center;              /* Center text */
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* Title */
+  .color-matching-game h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+    letter-spacing: 1px;
+  }
+  
+  /* Instruction text */
+  .color-matching-game p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  /* Score text */
+  .color-matching-game p:last-of-type {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 30px;
+    color: #222;
+  }
+  
+  /* Container for color buttons */
+  .color-matching-game .color-buttons {
+    display: flex;
+    justify-content: space-evenly;   /* Even spacing between buttons */
+    margin: 0 auto;
+    max-width: 300px;                /* Constrain button row width */
+  }
+  
+  /* Individual color button styling */
+  .color-matching-game .color-buttons button {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  /* Hover effect */
+  .color-matching-game .color-buttons button:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  }
+  

@@ -1,0 +1,156 @@
+/************************************
+  Mindful Games Container
+************************************/
+.mindful-games-container {
+  width: 60%;
+  margin: 40px auto;                /* Center the container with top spacing */
+  padding: 30px;                    /* More spacious padding */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(240, 244, 248, 0.8) 100%
+  );                                /* Subtle gradient for a polished look */
+  backdrop-filter: blur(8px);       /* Glassmorphic effect */
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Softer, larger shadow */
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main heading (e.g., "Mindful Games") */
+.mindful-games-container h2 {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+/* Subheading or descriptive text */
+.mindful-games-container p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/************************************
+  Game Buttons
+************************************/
+.game-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.game-buttons button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  background: #007bff;        /* Primary color */
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.game-buttons button:hover {
+  background: #0056b3;        /* Darken on hover */
+  transform: translateY(-2px);
+}
+
+/************************************
+  Game Area
+************************************/
+.game-area {
+  margin-top: 30px;
+}
+
+/************************************
+  Breathing Circle
+************************************/
+.breathing-circle {
+  width: 120px;
+  height: 120px;
+  margin: 20px auto;
+  border-radius: 50%;
+  background: radial-gradient(circle, #cfe9ff 0%, #b2dffc 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #333;
+  transition: transform 4s ease-in-out, background 4s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Inhale and exhale states */
+.inhale {
+  transform: scale(1.2);
+  background: radial-gradient(circle, #91f2c1 0%, #4CAF50 100%);
+}
+
+.exhale {
+  transform: scale(0.8);
+  background: radial-gradient(circle, #ffb8b8 0%, #F44336 100%);
+}
+
+/************************************
+  Color Matching Game
+************************************/
+/* Container for color buttons */
+.color-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+/* Individual color buttons */
+.color-buttons button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Hover effect for color buttons */
+.color-buttons button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/************************************
+  Memory Game
+************************************/
+.memory-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.memory-card {
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  cursor: pointer;
+  background: #ddd;
+  border: none;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.memory-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* When a memory card is matched */
+.memory-card.matched {
+  background: #4CAF50; /* Green for matched */
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+}

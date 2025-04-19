@@ -1,0 +1,64 @@
+{
+    "background": {
+      "color": "#f0f4ff"
+    },
+    "particles": {
+      "number": {
+        "value": 60,
+        "density": {
+          "enable": true,
+          "area": 800
+        }
+      },
+      "color": {
+        "value": "#1565c0"
+      },
+      "shape": {
+        "type": "circle"
+      },
+      "opacity": {
+        "value": 0.4,
+        "random": false
+      },
+      "size": {
+        "value": 3,
+        "random": true
+      },
+      "links": {
+        "enable": true,
+        "distance": 120,
+        "color": "#90caf9",
+        "opacity": 0.3,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 1.2,
+        "direction": "none",
+        "out_mode": "out"
+      }
+    },
+    "interactivity": {
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "grab"
+        },
+        "onclick": {
+          "enable": false,
+          "mode": "push"
+        },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 140,
+          "links": {
+            "opacity": 0.5
+          }
+        }
+      }
+    },
+    "retina_detect": true
+  }
+  

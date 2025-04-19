@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* BASE STYLES */
+.auth-wrapper {
+    display: flex;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif; /* ✅ Apply Poppins globally */
+    flex-wrap: wrap;
+    font-weight: 400;
+  }
+  
+  /* LEFT SECTION */
+  .auth-left {
+    flex: 1;
+    background: linear-gradient(135deg, #b4e4d5, #d7e1f2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    color:wheat;
+ 
+  }
+  
+  .auth-left h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .auth-left p {
+    font-size: 1.2rem;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  /* RIGHT SECTION */
+  .auth-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: #ffffff;
+  }
+  
+  .auth-container {
+    width: 100%;
+    max-width: 400px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .auth-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #34495e;
+  }
+  
+  .auth-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  .auth-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .auth-container button:hover {
+    background-color: rgb(72, 70, 70);
+  }
+  
+  /* Role Buttons */
+  .role-buttons {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .role-btn {
+    padding: 10px 18px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    min-width: 120px;
+    text-align: center;
+  }
+  
+  .role-btn:active {
+    transform: scale(0.95);
+  }
+  
+  .student-btn {
+    background-color: black;
+    color: #1565c0;
+    border: 2px solid #90caf9;
+  }
+  
+  .counselor-btn {
+    background-color: black;
+    color: white;
+    border: 2px solid #a5d6a7;
+  }
+  
+  .role-btn.active {
+    background-color: #42a5f5;
+    color: white;
+    cursor: default;
+    pointer-events: none;
+    border-color: #1e88e5;
+  }
+  
+  .role-btn:hover:not(.active) {
+    opacity: 0.9;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  }
+  
+  /* Auth toggle link */
+  .toggle-auth {
+    text-align: center;
+    margin-top: 12px;
+  }
+  
+  .toggle-auth span {
+    color: #2980b9;
+    cursor: pointer;
+  }
+  
+  /* ✅ RESPONSIVE MEDIA QUERIES */
+  @media screen and (max-width: 768px) {
+    .auth-wrapper {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .auth-left,
+    .auth-right {
+      flex: none;
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .auth-left h1 {
+      font-size: 2rem;
+    }
+  
+    .auth-left p {
+      font-size: 1rem;
+    }
+  
+    .role-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .role-btn {
+      width: 100%;
+      max-width: 250px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .auth-container {
+      padding: 20px;
+    }
+  
+    .auth-left {
+      padding: 20px;
+    }
+  
+    .auth-left h1 {
+      font-size: 1.8rem;
+    }
+  
+    .auth-left p {
+      font-size: 0.95rem;
+    }
+  
+    .auth-container input,
+    .auth-container button {
+      font-size: 0.95rem;
+    }
+  }
+  

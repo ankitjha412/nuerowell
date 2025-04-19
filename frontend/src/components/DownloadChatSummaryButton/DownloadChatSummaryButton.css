@@ -1,0 +1,33 @@
+.download-summary-btn {
+    /* Base styling */
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient background */
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    margin: 0px;
+    margin-left: 280px;
+    border-radius: 8px; /* Slightly more rounded corners */
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Hover effect: scale up a bit and change shadow */
+  .download-summary-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Active state: scale back to normal */
+  .download-summary-btn:active {
+    transform: scale(0.98);
+  }
+  
+  /* Focus state: outline for accessibility */
+  .download-summary-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(37, 117, 252, 0.5);
+  }
+  
