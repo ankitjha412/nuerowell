@@ -140,7 +140,7 @@ const CounselorDashboard = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/active-students")
+      .get("https://nuerowell.onrender.com/api/active-students")
       .then((res) => setStudents(res.data))
       .catch((err) => console.error("Error fetching students:", err));
 

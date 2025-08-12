@@ -1,9 +1,3 @@
-
-
-
-
-
-
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -51,14 +45,7 @@ wss.on('connection', (ws) => {
         console.log("Current clients:", Array.from(clients.keys()));
       }
 
-      // 🔹 CHAT relay logic
-      // if (data.type === "chat") {
-      //   const { from, to, text } = data;
-      //   const targetSocket = clients.get(to);
-      //   if (targetSocket && targetSocket.readyState === WebSocket.OPEN) {
-      //     targetSocket.send(JSON.stringify({ from, text }));
-      //   }
-      // }
+   
 
       if (data.type === "chat") {
         const { from, to, text, senderName } = data;

@@ -17,7 +17,8 @@ const StudentChatbot = () => {
 
 
   useEffect(() => {
-    socketRef.current = new WebSocket("ws://localhost:5000");
+    // socketRef.current = new WebSocket("ws://localhost:5000");
+    socketRef.current = new WebSocket("wss://nuerowell.onrender.com");
     socketRef.current.onopen = () => {
       socketRef.current.send(JSON.stringify({ type: "join", rollno, role: "student", name }));
     };
@@ -45,7 +46,7 @@ const StudentChatbot = () => {
       setTyping(true); // 👈 Start typing animation
   
       try {
-        const res = await fetch("http://10.1.73.168:8020/chat", {
+        const res = await fetch("http://10.1.165.144:8020/chat", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -114,7 +115,7 @@ const StudentChatbot = () => {
   
     try {
       // Step 2: Send message to chatbot server
-      const res = await fetch("http://10.1.73.168:8020/chat", {
+      const res = await fetch("http://10.1.165.144:8020/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
